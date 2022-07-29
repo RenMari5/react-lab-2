@@ -1,3 +1,5 @@
 import { Post } from "../App";
 
-export default function SocialPost({}) {}
+export default function SocialPost({}) {
+  const [];
+}

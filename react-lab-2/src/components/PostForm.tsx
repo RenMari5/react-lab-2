@@ -4,12 +4,16 @@ import "./PostForm.css";
 
 // TodoForm
 
-interface PostFormProps {
+// interface PostFormProps {
+//   onSubmit: (post: Post) => void;
+//   onClose: (post: Post) => void;
+// }
+
+export default function PostForm(props: {
+  post: Post;
   onSubmit: (post: Post) => void;
   onClose: (post: Post) => void;
-}
-
-export default function PostForm({ onSubmit }: PostFormProps) {
+}) {
   const [post, setPost] = useState<Post>({ title: "", thought: "" });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -18,7 +22,7 @@ export default function PostForm({ onSubmit }: PostFormProps) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    onSubmit(post);
+    props.onSubmit(post);
     clearFormValues();
   }
 

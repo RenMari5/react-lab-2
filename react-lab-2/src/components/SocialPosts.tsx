@@ -29,15 +29,30 @@ export default function SocialPost({}) {
     });
   }
 
+  function handleSubmitPost(index: number) {
+    return setPostList((postList) => {
+      const newList = postList.push();
+      return newList;
+    });
+  }
+
+  function handleClosePost {
+
+  }
+
   return (
     <div className="my-thoughts">
       <header style={{ fontFamily: "Homemade Apple" }}>My Thoughts</header>
       <button className="new-thought-button" onClick={() => handleOpenThought}>
         New Thought
       </button>
-      <PostForm />
-      {postList.map((post) => (
-        <PostInList onDelete={handleDeletePost} />
+      <PostForm
+        post={post}
+        onSubmit={handleSubmitPost}
+        onClose={handleClosePost}
+      />
+      {postList.map((post, index) => (
+        <PostInList post={post} postIndex={index} onDelete={handleDeletePost} />
       ))}
     </div>
   );

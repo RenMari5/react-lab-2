@@ -13,9 +13,9 @@ export default function SocialPost({}) {
     return <h1>Hello Modal</h1>;
   }
 
-  function handleSubmit(post: Post) {
-    setPostList([post, ...postList]);
-  }
+  // function handleSubmit(post: Post) {
+  //   setPostList([post, ...postList]);
+  // }
 
   function deletePost(index: number) {
     return setPostList((prev) => {
@@ -28,9 +28,8 @@ export default function SocialPost({}) {
   return (
     <div className="my-thoughts">
       <header>My Thoughts</header>
-      <button onClick={handleOpenThought}>New Thought</button>
-      <PostList />
-      <PostInList onDelete={deletePost} />
+      <button>New Thought</button>
+      {/* <PostInList onDelete={deletePost} /> */}
     </div>
   );
 }

@@ -38,7 +38,7 @@ export default function PostForm(props: {
     <form className="modal" onSubmit={props.onClose}>
       <div className="modal-content">
         <div className="modal-header">
-          <h4>Title</h4>
+          <h4 className="title">Title</h4>
           <input
             type="text"
             name="post"
@@ -46,18 +46,18 @@ export default function PostForm(props: {
             value={post.title}
             onChange={handleTitleChange}
           />
-        </div>
-        <div className="modal-body">
-          <h4>Thought</h4>
-          <input
-            type="text"
-            name="post"
-            placeholder="Enter a thought"
-            value={post.thought}
-            onChange={handleThoughtChange}
-          />
-          <div className="modal-footer">
-            <button onClick={handleSubmit}>Add Post</button>
+          <div className="modal-body">
+            <h4 className="thought">Thought</h4>
+            <input
+              type="text"
+              name="post"
+              placeholder="Enter a thought"
+              value={post.thought}
+              onChange={handleThoughtChange}
+            />
+            <div className="modal-footer">
+              <button onClick={handleSubmit}>Add Post</button>
+            </div>
           </div>
         </div>
       </div>

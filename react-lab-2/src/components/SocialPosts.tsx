@@ -44,12 +44,18 @@ export default function SocialPost({}) {
           New Thought
         </button>
       </div>
-      {thought ? (
-        <PostForm onSubmit={handleSubmitPost} onClose={handleCloseForm} />
-      ) : null}
-      {postList.map((post, index) => (
-        <PostInList post={post} postIndex={index} onDelete={handleDeletePost} />
-      ))}
+      <div className="post-container">
+        {thought ? (
+          <PostForm onSubmit={handleSubmitPost} onClose={handleCloseForm} />
+        ) : null}
+        {postList.map((post, index) => (
+          <PostInList
+            post={post}
+            postIndex={index}
+            onDelete={handleDeletePost}
+          />
+        ))}
+      </div>
     </div>
   );
 }

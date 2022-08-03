@@ -8,7 +8,10 @@ interface PostProp {
   onDelete: (index: number) => void;
 }
 
-export default function PostInList(props: any) {
+export default function PostInList(props: {
+  post: Post;
+  onDelete: (index: number) => any;
+}) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <p>{props.post.title}</p>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Post } from "../App";
+import "./PostForm.css";
 
 // TodoForm
 
@@ -48,7 +49,7 @@ export default function PostForm({ onSubmit }: PostFormProps) {
             />
           </div>
           <div className="modal-footer">
-            <button>Add Post</button>
+            <button onClick={handleSubmit}>Add Post</button>
           </div>
         </div>
       </div>

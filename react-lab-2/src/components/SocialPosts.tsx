@@ -32,7 +32,9 @@ export default function SocialPost({}) {
   return (
     <div className="my-thoughts">
       <header style={{ fontFamily: "Homemade Apple" }}>My Thoughts</header>
-      <button onClick={() => handleOpenThought}>New Thought</button>
+      <button className="new-thought-button" onClick={() => handleOpenThought}>
+        New Thought
+      </button>
       <PostForm />
       <PostInList onDelete={handleDeletePost} />
     </div>

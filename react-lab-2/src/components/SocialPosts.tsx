@@ -36,9 +36,9 @@ export default function SocialPost({}) {
     });
   }
 
-  function handleClosePost {
+  // function handleClosePost {
 
-  }
+  // }
 
   return (
     <div className="my-thoughts">
@@ -49,7 +49,7 @@ export default function SocialPost({}) {
       <PostForm
         post={post}
         onSubmit={handleSubmitPost}
-        onClose={handleClosePost}
+        // onClose={handleClosePost}
       />
       {postList.map((post, index) => (
         <PostInList post={post} postIndex={index} onDelete={handleDeletePost} />

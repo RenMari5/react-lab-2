@@ -6,6 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 interface PostProp {
   posts: Post[];
   onDelete: (index: number) => void;
+  postIndex: number;
 }
 
 export default function PostInList(props: {

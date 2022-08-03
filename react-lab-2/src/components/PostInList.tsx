@@ -3,15 +3,16 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 // TodoListItem
 
-interface PostProp extends Post {
+interface PostProp {
   posts: Post[];
   onDelete: (index: number) => void;
 }
 
-export default function PostInList({ posts, onDelete }: PostProp) {
+export default function PostInList(props: any) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <button onClick={() => onDelete(posts.index)}>X</button>
+      <p>{props.post.title}</p>
+      <button onClick={() => props.onDelete(props.post.index)}>X</button>
     </div>
   );
 }

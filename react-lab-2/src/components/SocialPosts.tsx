@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Post } from "../App";
 import PostInList from "./PostInList";
 import Modal from "react-modal";
+import "./SocialPosts.css";
 
 // App
 
@@ -27,7 +28,7 @@ export default function SocialPost({}) {
 
   return (
     <div className="my-thoughts">
-      <header>My Thoughts</header>
+      <header style={{ fontFamily: "Homemade Apple" }}>My Thoughts</header>
       <button>New Thought</button>
       {/* <PostInList onDelete={deletePost} /> */}
     </div>

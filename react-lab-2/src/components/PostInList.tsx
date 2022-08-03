@@ -4,15 +4,19 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 // TodoListItem
 
 interface PostProp extends Post {
-  post: Post;
+  posts: Post[];
   onDelete: (index: number) => void;
 }
 
-export default function PostInList({ post, onDelete }: PostProp) {
+export default function PostInList({ posts, onDelete }: PostProp) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <p>{post.title}</p>
-      <button onClick={() => onDelete(post.index)}>X</button>
+      <ul>
+        {posts.map((post) => (
+          <li key={post}>{post}</li>
+        ))}
+      </ul>
+      <button onClick={() => onDelete(posts.index)}>X</button>
     </div>
   );
 }

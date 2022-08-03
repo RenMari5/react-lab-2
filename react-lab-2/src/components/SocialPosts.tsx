@@ -3,6 +3,7 @@ import { Post } from "../App";
 import PostInList from "./PostInList";
 import Modal from "react-modal";
 import "./SocialPosts.css";
+import PostForm from "./PostForm";
 
 // App
 
@@ -11,7 +12,9 @@ export default function SocialPost({}) {
   const [postList, setPostList] = useState<Post[]>([]);
 
   function handleOpenThought(e: React.ChangeEvent<HTMLInputElement>) {
-    return <h1>Hello Modal</h1>;
+    if (!thought) {
+      return null;
+    }
   }
 
   // function handleSubmit(post: Post) {
@@ -29,8 +32,8 @@ export default function SocialPost({}) {
   return (
     <div className="my-thoughts">
       <header style={{ fontFamily: "Homemade Apple" }}>My Thoughts</header>
-      <button>New Thought</button>
-
+      <button onClick={() => handleOpenThought}>New Thought</button>
+      <PostForm />
       <PostInList onDelete={handleDeletePost} />
     </div>
   );

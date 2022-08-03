@@ -1,4 +1,5 @@
 import { Post } from "../App";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
 // TodoListItem
 

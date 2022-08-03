@@ -26,15 +26,32 @@ export default function PostForm({ onSubmit }: PostFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="post"
-        placeholder="Enter a thought"
-        value={post.thought}
-        onChange={handleChange}
-      />
-      <button type="submit">Post</button>
+    <form className="modal">
+      <div className="modal-content">
+        <div className="modal-header">
+          <h4>Title</h4>
+          <input
+            type="text"
+            name="post"
+            placeholder="Enter a title"
+            value={post.thought}
+            onChange={handleChange}
+          />
+          <div className="modal-body">
+            <h4>Thought</h4>
+            <input
+              type="text"
+              name="post"
+              placeholder="Enter a thought"
+              value={post.thought}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="modal-footer">
+            <button>Add Post</button>
+          </div>
+        </div>
+      </div>
     </form>
   );
 }

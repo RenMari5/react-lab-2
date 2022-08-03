@@ -36,6 +36,11 @@ export default function SocialPost({}) {
         New Thought
       </button>
       <PostForm />
+      <ul>
+        {postList.map((post) => (
+          <li key={post}>{post}</li>
+        ))}
+      </ul>
       <PostInList onDelete={handleDeletePost} />
     </div>
   );

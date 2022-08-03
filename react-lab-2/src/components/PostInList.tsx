@@ -11,11 +11,6 @@ interface PostProp extends Post {
 export default function PostInList({ posts, onDelete }: PostProp) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <ul>
-        {posts.map((post) => (
-          <li key={post}>{post}</li>
-        ))}
-      </ul>
       <button onClick={() => onDelete(posts.index)}>X</button>
     </div>
   );

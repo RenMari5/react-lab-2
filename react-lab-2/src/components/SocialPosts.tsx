@@ -4,6 +4,7 @@ import PostInList from "./PostInList";
 import Modal from "react-modal";
 import "./SocialPosts.css";
 import PostForm from "./PostForm";
+import { faTrash, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 // App
 

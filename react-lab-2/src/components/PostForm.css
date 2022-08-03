@@ -13,11 +13,16 @@
 .modal-content {
   width: 500px;
   background-color: #79c5e8;
+  border-radius: 5px;
+  margin: 0;
 }
 
 .modal-header,
 .modal-footer {
   padding: 10px;
+}
+
+input {
 }
 
 .modal-title {

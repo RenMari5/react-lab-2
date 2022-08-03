@@ -1,7 +1,21 @@
-header {
+body,
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
   font-family: "Homemade Apple", cursive;
+  color: #03a9f4;
 }
 
 .new-thought-button {
   background-color: #03a9f4;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
 }

@@ -2,12 +2,12 @@ import { Post } from "../App";
 
 // TodoListItem
 
-interface PostInListProp extends Post {
+interface PostProp extends Post {
   post: Post;
   onDelete: (index: number) => void;
 }
 
-export default function PostInList({ post, onDelete }: PostInListProp) {
+export default function PostInList({ post, onDelete }: PostProp) {
   <div>
     <button onClick={() => onDelete(post.index)}>X</button>
   </div>;

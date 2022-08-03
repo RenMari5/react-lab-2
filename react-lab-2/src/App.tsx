@@ -9,8 +9,6 @@ export interface Post {
 function App() {
   return (
     <div className="App">
-      <header></header>
-
       <SocialPost />
     </div>
   );

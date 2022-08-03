@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Post } from "../App";
+import PostInList from "./PostInList";
+import Modal from "react-modal";
 
 // App
 
@@ -8,7 +10,7 @@ export default function SocialPost({}) {
   const [postList, setPostList] = useState<Post[]>([]);
 
   function handleOpenThought(e: React.ChangeEvent<HTMLInputElement>) {
-    setThought;
+    return <h1>Hello Modal</h1>;
   }
 
   function handleSubmit(post: Post) {
@@ -25,9 +27,9 @@ export default function SocialPost({}) {
 
   return (
     <div className="my-thoughts">
-      <h1>My Thoughts</h1>
-
-      <button>New Thought</button>
+      <header>My Thoughts</header>
+      <button onClick={handleOpenThought}>New Thought</button>
+      <PostList />
       <PostInList onDelete={deletePost} />
     </div>
   );

@@ -18,7 +18,7 @@ export default function SocialPost({}) {
   //   setPostList([post, ...postList]);
   // }
 
-  function deletePost(index: number) {
+  function handleDeletePost(index: number) {
     return setPostList((prev) => {
       const newList = prev.slice(0);
       newList.splice(index, 1);
@@ -30,7 +30,8 @@ export default function SocialPost({}) {
     <div className="my-thoughts">
       <header style={{ fontFamily: "Homemade Apple" }}>My Thoughts</header>
       <button>New Thought</button>
-      {/* <PostInList onDelete={deletePost} /> */}
+
+      <PostInList onDelete={handleDeletePost} />
     </div>
   );
 }

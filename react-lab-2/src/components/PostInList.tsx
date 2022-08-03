@@ -8,7 +8,8 @@ interface PostProp extends Post {
 }
 
 export default function PostInList({ post, onDelete }: PostProp) {
-  <div>
+  <div style={{ display: "flex", flexDirection: "column" }}>
+    <p>{post.title}</p>
     <button onClick={() => onDelete(post.index)}>X</button>
   </div>;
 }
